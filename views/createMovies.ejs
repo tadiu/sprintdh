@@ -1,0 +1,54 @@
+<%- include('header') -%> 
+<h1>Crear pelicula</h1>
+
+<form action="/movies/create" method="POST">
+
+    <div>
+        <label for="">Titulo</label>
+        <input type="text" name="title">
+    </div>
+
+    <div>
+        <label for="">Premios</label>
+        <input type="text" name="awards">
+    </div>
+
+    <div>
+        <label for="">Duracion</label>
+        <input type="text" name="length">
+    </div>
+
+    <div>
+        <label for="">Rating</label>
+        <input type="text" name="rating">
+    </div>
+
+    <div>
+        <label for="">Fecha de estreno</label>
+        <input type="date" name="release_date">
+    </div>
+
+    <div>
+        <label for="">Genero</label>
+        <select name="genre_id">
+           <% generos.forEach(genero => {%> 
+            <option value="<%=genero.id%>">
+                <%=genero.name%> 
+            </option>
+           <% }) %> 
+        </select>
+    </div>
+
+    <div>
+        <label for="">Actores</label>
+        <select name='actor_id'multiple>
+            <% actors.forEach(actor => { %>
+            <option value=<%= actor.id %>><%= actor.first_name %> <%= actor.first_name %> </option> 
+            <% }); %> 
+        </select>
+    </div>
+
+    <button type="submit">Crear</button>
+</form>
+
+<%- include('footer') -%> 

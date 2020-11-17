@@ -1,0 +1,55 @@
+<%- include('header') -%> 
+<h1>Editar pelicula</h1>
+
+<form action="/movies/edit/<%=pelicula.id%>" method="POST">
+
+    <div>
+        <label for="">Titulo</label>
+        <input type="text" name="title" value="<%=pelicula.title%>">
+    </div>
+
+    <div>
+        <label for="">Premios</label>
+        <input type="text" name="awards" value="<%=pelicula.awards%>">
+    </div>
+
+    <div>
+        <label for="">Duracion</label>
+        <input type="text" name="length" value="<%=pelicula.length%>">
+    </div>
+
+    <div>
+        <label for="">Rating</label>
+        <input type="text" name="rating" value="<%=pelicula.rating%>">
+    </div>
+
+    <div>
+        <label for="">Fecha de estreno</label>
+        <input type="date" name="release_date">
+    </div>
+
+    <div>
+        <label for="">Genero</label>
+        <select name="genre_id">
+           <% generos.forEach(genero => {%> 
+            <% if (genero.id == pelicula.genre_id) {%> 
+                <option value="<%=genero.id%>" selected>
+                    <%=genero.name%> 
+                </option>
+            <% } else { %> 
+                <option value="<%=genero.id%>">
+                    <%=genero.name%> 
+                </option>
+            <% } %> 
+           <% }) %> 
+        </select>
+    </div>
+
+    <button type="submit">Editar</button>
+
+</form>
+
+
+
+
+<%- include('footer') -%> 
