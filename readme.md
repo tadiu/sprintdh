@@ -1,0 +1,1 @@
+-Aclaro que entre que empecé a laburar y con los finales de donde estudio, no tuve mucho tiempo para ponerme al día bien con los conceptos y a pulir bien el proyecto. Todavia no me acostumbro a organizar mis tiempos pero se que es algo necesario para laburar de esto asi que intentaré mejorar en eso.
